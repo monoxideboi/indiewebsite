@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=1000" />
+    <title>Asoik's City</title>
+    <link rel="stylesheet" href="./src/css/comment-widget.css" />
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <script src="./src/js/statupdater.js"></script>
+    <script src="./src/js/shitchromefix.js"></script>
+    <script src="./src/js/musicStats.js"></script>
+    <script src="./src/js/quote.js"></script>
+    <script src="./src/js/steamStats.js"></script>
+    <script src="./src/js/timeAgo.js"></script>
+    <script src="./src/js/ror2Stats.js"></script>
+
+  </head>
+
+  <body
+    align="center"
+    onload="getStats(); ifChrome(); getSong(); genQuote(); getRecentlyPlayed();"
+  >
+    <div style="width: 1138px" id="bg">
+      <img
+        height="55px"
+        style="margin-left: 3%; margin-top: 1%"
+        src="./src/assets/images/logo/asoik_.gif"
+      />
+      <div width="100%" align="center">
+        <table width="900px">
+          <div class="box" style="width: 850px" hidden></div>
+          <tr>
+            <td id="maintd">
+              <div class="box" style="padding-bottom: 5px">
+                <p>
+                  <marquee id="quote"
+                    >If youre seeing this something is broken lol</marquee
+                  >
+                </p>
+              </div>
+              <div class="box">
+                <!-- <h2
+                        style=' font-family: 'Neue' , sans-serif; color: black; font-size: 5rem; font-weight: 400;'>
+                    Welcome to my website!!</h2> -->
+                <h2>&lt;/&gt; Welcome to my City!!</h2>
+                <br />
+                <img id="avatar" src="./src/assets/images/avatar/avatar.png" />
+                <p>
+                  Hi! This is my own little corner of the internet. I saw a ton
+                  of cool sites on neocities one day and decided to make my own!
+                </p>
+                <br />
+                <p>
+                  This site is my diary and escape from social media! I really
+                  want to make something mine but without a corporate and
+                  soulless template.
+                </p>
+                <ul>
+                  <li>I'm a CS/IT student studying in Chicago</li>
+                  <li>
+                    MERN stack dev (react would have been overkill for this)
+                  </li>
+                  <li>I like making discord bots</li>
+                  <li>I love taking photos</li>
+                  <li>I <b>REALLY</b> like risk of rain!</li>
+                </ul>
+                <p>
+                  If you're seeing this I'm not done with this site yet! Heres
+                  my roadmap!
+                </p>
+                <ul>
+                  <li><s>Chrome support</s></li>
+                  <li><s>Mobile support</s></li>
+                  <li><s>Diary/blog</s></li>
+                  <li><s>RSS feed for diary/blog</s></li>
+                  <li>Move about me stuff into subpages</li>
+                  <li><s>Add last.fm</s></li>
+                </ul>
+              </div>
+              <div
+                style="display: flex; flex-wrap: wrap"
+                style="height: 64px; width: 665px"
+              >
+                <!-- <div class="box recentGameBox" style="padding-left: 10px">
+                  <div class="recentGame">
+                    <img
+                      class="recentGameImg"
+                      src="https://media.steampowered.com/steamcommunity/public/images/apps/632360/0b809ac6f25e6570fecae5fc47bca0139a7bf70c.jpg"
+                    />
+                    <p class="recentGameName">test</p>
+                    <p class="recentGameHours">test</p>
+                  </div>
+                </div>
+                <div class="box recentGameBox" style="padding-left: 10px">
+                  <div class="recentGame">
+                    <img
+                      class="recentGameImg"
+                      src="https://media.steampowered.com/steamcommunity/public/images/apps/632360/0b809ac6f25e6570fecae5fc47bca0139a7bf70c.jpg"
+                    />
+                    <p class="recentGameName">test</p>
+                    <p class="recentGameHours">test</p>
+                  </div>
+                </div>
+              </div> -->
+              <div class="box">
+                <h2>Guestbook</h2>
+                <div
+                  id="c_widget"
+                  style="overflow-y: auto; height: 500px"
+                ></div>
+                <script src="./src/js/comment-widget.js"></script>
+              </div>
+              <div class="box">
+                <h2>Update log</h2>
+                <br>
+                <p>
+                  Nov 8: Added steam stats and added to tooldbox<br>
+                  Nov 5: Added mobile support, lastfm music status, and
+                  scrolling song quotes!<br />
+                  Nov 2: Added toolbox! I made a lastfm cf worker!<br />
+                  Oct 12: Added Diary and RSS!<br />
+                  Oct 10: Fixed chrome, added about site<br />
+                  Oct 9: Basically made the website
+                </p>
+              </div>
+            </td>
+            <td id="menutd">
+              <div class="box">
+                <h2>/dir</h2>
+                <br>
+                <a class="navlink" href="./">/home</a><br />
+                <a class="navlink" href="./me">/me</a><br />
+                <a class="navlink" href="./site">/site</a><br />
+                <a class="navlink" href="./diary">/diary</a><br />
+                <a class="navlink" href="./toolbox">/toolbox</a>
+              </div>
+              <div class="box">
+                <h2>/music</h2>
+                <br />
+                <a id="songBox" style="text-decoration: none" target="_blank">
+                  <div>
+                    <img
+                      id="songArt"
+                      style="border: 5px double #131d95; width: 170px"
+                    />
+                    <span id="songName">
+                      <marquee
+                        onMouseOver="this.stop()"
+                        onMouseOut="this.start()"
+                      >
+                        If youre seeing this something is broken lol</marquee
+                      >
+                    </span>
+                    <br />
+                    <span id="songArtist">
+                      <marquee
+                        >If youre seeing this something is broken lol</marquee
+                      >
+                    </span>
+                    <br />
+                    <br />
+                    <p id="songTime"></p>
+                  </div>
+                </a>
+              </div>
+              <div class="box">
+                <h2>/ror2</h2>
+                <div>
+                <img style="width: 40px;" src="./src/assets/images/gameIcons/632360.png">
+                <p id='rorhours' style="float: right; margin-top: 10px;">asd</p>                  
+              </div>
+              <div width="100%">
+                <p id='rorBar' align="center">▒▒▒▒▒▒▒▒▒▒</p>
+              </div>
+              </div>
+              <div class="box">
+                <h2>/recent</h2>
+                <p class="recentGame">
+                  <!-- <img
+                    class="recentGameImg"
+                    src="https://media.steampowered.com/steamcommunity/public/images/apps/632360/0b809ac6f25e6570fecae5fc47bca0139a7bf70c.jpg"
+                  /> -->
+                  <span class="recentGameName">test</span>
+                  <span class="recentGameHours">test</span>
+                </p>
+                <p class="recentGame">
+                  <!-- <img
+                    class="recentGameImg"
+                    src="https://media.steampowered.com/steamcommunity/public/images/apps/632360/0b809ac6f25e6570fecae5fc47bca0139a7bf70c.jpg"
+                  /> -->
+                  <span class="recentGameName">test</span>
+                  <span class="recentGameHours">test</span>
+                </p>
+                <p class="recentGame">
+                  <!-- <img
+                    class="recentGameImg"
+                    src="https://media.steampowered.com/steamcommunity/public/images/apps/632360/0b809ac6f25e6570fecae5fc47bca0139a7bf70c.jpg"
+                  /> -->
+                  <span class="recentGameName">test</span>
+                  <span class="recentGameHours">test</span>
+                </p>
+              </div>
+              <div class="box">
+                <h2>/links</h2>
+                <br />
+                <a
+                  class="navlink"
+                  href="https://discord.com/users/375379813403328523"
+                  target="_blank"
+                >
+                  /Discord</a
+                ><br />
+                <a
+                  class="navlink"
+                  href="https://x.com/monoxideboi"
+                  target="_blank"
+                  rel="me"
+                  >/Twitter</a
+                ><br />
+                <a
+                  class="navlink"
+                  href="https://github.com/monoxideboi"
+                  target="_blank"
+                  rel="me"
+                  >/Github</a
+                ><br />
+                <a
+                  class="navlink"
+                  href="https://nekoweb.org/frame/follow"
+                  target="_blank"
+                  >/Nekoweb</a
+                >
+              </div>
+              <div class="box">
+                <h2>/stats</h2>
+                <br />
+                <p>Visitors <span id="views">XXX</span></p>
+                <p>Followers <span id="followers">XXX</span></p>
+                <br />
+                <p>Updated <span id="update">XX/XX/XXXX</span></p>
+                <br />
+                <p>Created <span id="create">XX/XX/XXXX</span></p>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

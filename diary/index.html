@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>/diary</title>
+    <link rel="stylesheet" href="../src/css/style.css">
+    <script src="../src/js/shitchromefix.js"></script>
+    <script src="../src/js/entryFilter.js"></script>
+    <meta name="viewport" content="width=1000">
+
+</head>
+
+<body align="center" onload="ifChrome();">
+    <div style="width: 1138px;" id="bg">
+        <img height="55px" style="margin-left: 3%; margin-top: 1%;" src="../src/assets/images/logo/asoik_.gif">
+        <div width="100%" align="center">
+            <table width="900px"">
+            <tr>
+                <td id="menutd">
+                <div class="box"">
+                    <!-- <h2
+                        style=" font-family: 'Neue' , sans-serif; color: black; font-size: 5rem; font-weight: 400;">
+                    Welcome to my website!!</h2> -->
+                    <a href="../">
+                        <h2>
+                            <- Home</h2>
+                    </a>
+                    <img id="avatar"
+                        style="width: 177px; float: none; margin-bottom: 5px; margin-top: 10px; margin-right:0px;"
+                        src="../src/assets/images/avatar/avatar.png">
+                    <h2>Tags</h2>
+                    <button class="filter" onclick="handleClick(event)">Music</button>
+                    <button class="filter" onclick="handleClick(event)">CS/IT</button>
+                    <button class="filter" onclick="handleClick(event)">Deep</button>
+                    <button class="filter" onclick="handleClick(event)">Games</button>
+                    <button class="filter" onclick="handleClick(event)">Anime/Manga</button>
+                    <button class="filter" onclick="handleClick(event)">Photography</button>
+                    <button class="filter" onclick="handleClick(event)">Random</button>
+                    <button class="filter" onclick="handleClick(event)">Daily</button>
+
+
+
+                </div>
+                </td>
+                <td id="maintd">
+                    <div class="box"">
+                        <h2>
+                            /diary <a style="float: right;" href="./feed.xml"><h2>RSS</h2></a>
+                        </h2>
+                    </div>
+                    
+                    <a href=" ./CSelitism/" class="entry cs/it">
+                        <div class="box diaryEntry">
+                            <p>Elitism in CS<span style="float: right;">Oct 16 2024</span></p>
+                            <p></p>
+                        </div>
+                    </a>
+
+                    <a href=" ./optimism/" class="entry deep">
+                        <div class="box diaryEntry">
+                            <p>About Optimism and Assuming the Best <span style="float: right;">Oct 12 2024</span></p>
+                            <p></p>
+                        </div>
+                    </a>
+                    <!-- <a href=" ./socialMedia/" class="entry random">
+                        <div class="box diaryEntry">
+                            <p>Why I ACTUALLY Hate Social Media <span style="float: right;">Oct 12 2024</span></p>
+                            <p></p>
+                        </div>
+                    </a> -->
+                    <a href=" ./helloWrld/" class="entry">
+                        <div class="box diaryEntry">
+                            <p>Hello World! <span style="float: right;">Oct 12 2024</span></p>
+                            <p></p>
+                        </div>
+                    </a>
+                </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
