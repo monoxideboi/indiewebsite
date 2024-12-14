@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>badPico</title>
+    <link rel="stylesheet" href="../../src/css/style.css" />
+    <link rel="stylesheet" href="../../src/css/comment-widget.css" />
+    <script src="../../src/js/shitchromefix.js"></script>
+    <meta name="viewport" content="width=1000" />
+  </head>
+
+  <body align="center" onload="ifChrome();">
+    <div style="width: 1138px" id="bg">
+      <img
+        height="55px"
+        style="margin-left: 3%; margin-top: 1%"
+        src="../../src/assets/images/logo/asoik_.gif"
+      />
+      <div width="100%" align="center">
+        <table width="900px">
+          <tr>
+            <td id="menutd">
+              <div class="box">
+                <!-- <h2
+                                style=" font-family: 'Neue' , sans-serif; color: black; font-size: 5rem; font-weight: 400;">
+                            Welcome to my website!!</h2> -->
+                <a href="../">
+                  <h2><- Diary</h2>
+                </a>
+                <img
+                  id="avatar"
+                  style="
+                    width: 177px;
+                    float: none;
+                    margin-bottom: 5px;
+                    margin-top: 10px;
+                    margin-right: 0px;
+                  "
+                  src="../../src/assets/images/avatar/avatar.png"
+                />
+                <h2>Date</h2>
+                <p>Oct 12 2024</p>
+                <h2>Tags</h2>
+                <button>CS/IT</button>
+              </div>
+            </td>
+            <td id="maintd">
+              <div class="box">
+                <h2>badPico</h2>
+              </div>
+              <div class="box">
+                <p>
+                  So recently Ive been working on using my rpi pico, and Ive
+                  found a really fun use case for it! Been having a ton of fun
+                  programming stuff and seeing results.
+                </p>
+              </div>
+              <div class="box">
+                <p>
+                  For as long as I can remember Ive been fascinated by offensive
+                  security, and not just "hacking". I mean full all in
+                  investment, the idea of breaking, finding solution, or using
+                  trickery to do things on computer has always been super fun. I
+                  even had a favorite hacker (Kevin Mitnick my hero).
+                  <br /><br />It wasn't long before I found my first real
+                  fascination in the space, physical hardware attacks! I found
+                  the rubber ducky and it compeltely took over my life, really
+                  pushing me towards offensive security.<br /><br />If you dont
+                  know what a rubber ducky is, its a device that looks like a
+                  usb drive but actually mimics a keyboard and inputs keystrokes
+                  at lightning speed into a target computer! Almost undetectable
+                  and unstoppable if you have access to a physical computer.
+                  Absolutely awesome.<br /><br />Immediately I would google it
+                  just to find they were a little too much for moneyless me to
+                  purchase.<br /><br />However, at some point I found the
+                  arduino badusb and decided to make it myself for two dollars.
+                  Then I graduated to wifi version with an esp32, a rpi 0 w
+                  p4wnp1, p4wnp1 aloa, and then finally now on the pico!
+                  <br /><br />Now Ive decided to code the badusb functionality
+                  into the pi myself. Its not like this doesnt exist already,
+                  its definitely been done before. However, the script kiddie of
+                  before that originally found this fascination could never
+                  imagine what Id be doing now.<br /><br />This is the first
+                  time Ive coded functionality myself, its fun knowing how to
+                  make this stuff myself! I can add my own <img style='float: left; margin-right: 10px;' class='diaryImage' width='300px;' src="./assets/monkeytype.png">things and it boots
+                  faster than a real pi while having a ton of processing and
+                  space. Its crazy that this tiny device can run full circuit pi, if this was done on a arduino this would be impossible! Its really helped me see how my programming journey has
+                  looped back to a field that kicked it all off.<br /><br />I think that to end this project off I will implement the ability to exfil data through the pico's built in storage similar to p4wnp1 aloa. After that I think I can call this a success! <br><br>Next
+                  up I will probably either get a rpi pico w and make it
+                  wireless with a webserver, or I will optimize the code in
+                  something other than python. Python seems to be the limiting
+                  factor in terms of typing speed, and while its kind of
+                  pointless because the typing speed is really fast anyways I
+                  think itd be cool to shoot for the kind of performance of a
+                  ducky or arduino badusb.
+                </p>
+              </div>
+              <div class="box">
+                <h2>Comments</h2>
+                <div
+                  id="c_widget"
+                  style="overflow-y: auto; height: 500px"
+                ></div>
+                <script src="../../src/js/comment-widget.js"></script>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
