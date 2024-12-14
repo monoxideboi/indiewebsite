@@ -19,7 +19,7 @@ async function getRecentlyPlayed() {
         return json;
     });
 
-    for (let i = 0; i < data.recentgames.total_count; i++) {
+    for (let i = 0; i < data.recentGameNames.length; i++) {
         let game = data.recentgames.games[i];
         // recentGameImgs[i].src = `http://media.steampowered.com/steamcommunity/public/images/apps/${game.appid}/${game.img_icon_url}.jpg`
         
