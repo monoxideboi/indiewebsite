@@ -19,13 +19,13 @@ async function getRecentlyPlayed() {
         return json;
     });
 
-    for (let i = 0; i < data.recentGameNames.length; i++) {
+    for (let i = 0; i < recentGameNames.length; i++) {
         let game = data.recentgames.games[i];
         // recentGameImgs[i].src = `http://media.steampowered.com/steamcommunity/public/images/apps/${game.appid}/${game.img_icon_url}.jpg`
         
         let setName = game.name;
-        if (setName.length > 17) {
-            setName = game.name.substring(0,13) + '...';
+        if (setName.length > 15) {
+            setName = game.name.substring(0,11) + '...';
         }
         recentGameNames[i].innerHTML = setName;
         console.log(game.playtime_2weeks);
